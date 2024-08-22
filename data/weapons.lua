@@ -1,5 +1,11 @@
 return {
 	Weapons = {
+		['WEAPON_PROLASER4'] = {
+			label = 'Speed Radar Gun',
+			weight = 1500,
+			durability = 0.03,
+		},
+
 		['WEAPON_BATTLERIFLE'] = {
 			label = 'Battle Rifle',
 			weight = 3300,
