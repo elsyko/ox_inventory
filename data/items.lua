@@ -24,18 +24,11 @@ return {
     ["firstaid"] = { label = "First Aid", weight = 2500, stack = true, close = true, description = "You can use this First Aid kit to get people back on their feet" },
     ["painkillers"] = { label = "Painkillers", weight = 0, stack = true, close = true, description = "For pain you can't stand anymore, take this pill that'd make you feel great again" },
 
-	['parachute'] = { label = 'Parachute', weight = 8000, stack = false,
-		client = { anim = { dict = 'clothingshirt', clip = 'try_shirt_positive_d' }, usetime = 1500 }
-	},
-
-	['panties'] = { label = 'Panties', weight = 10, consume = 0,
-		client = {
-            status = { thirst = -100000, stress = -25000 }, anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' }, prop = { model = `prop_cs_panties_02`, pos = vec3(0.03, 0.0, 0.02), rot = vec3(0.0, -13.5, -1.5) }, usetime = 2500,
-		}
-	},
-
 	['lockpick'] = { label = 'Lockpick', weight = 160, client = { event = 'lockpick:use' } },
     ["advancedlockpick"] = { label = "Advanced Lockpick", weight = 500, stack = true, close = true, description = "If you lose your keys a lot this is very useful... Also useful to open your beers", client = { event = 'lockpick:use' } },
+    ['paperbag'] = { label = 'Paper Bag', weight = 1, stack = false, close = false, consume = 0 },
+    ["handcuffs"] = { label = "Handcuffs", weight = 100, stack = true, close = true, description = "Comes in handy when people misbehave. Maybe it can be used for something else?" },
+    ["police_stormram"] = { label = "Stormram", weight = 18000, stack = true, close = true, description = "A nice tool to break into doors" },
 
 	["phone"] = { label = "Phone", weight = 190, stack = false, consume = 0,
 		client = {
@@ -54,7 +47,6 @@ return {
     ['burger'] = { label = 'Burger', weight = 220,
 		client = { status = { hunger = 200000 }, anim = 'eating', prop = 'burger', usetime = 2500, notification = 'You ate a delicious burger' },
 	},
-
 	['sprunk'] = { label = 'Sprunk', weight = 350,
 		client = {
             status = { thirst = 200000 }, anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' }, prop = { model = `prop_ld_can_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) }, usetime = 2500, notification = 'You quenched your thirst with a sprunk'
@@ -70,6 +62,7 @@ return {
 
     ["xtcbaggy"] = { label = "Bag of XTC", weight = 0, stack = true, close = true, description = "Pop those pills baby" },
     ["rolling_paper"] = { label = "Rolling Paper", weight = 0, stack = true, close = true, description = "Paper made specifically for encasing and smoking tobacco or cannabis." },
+    ["lighter"] = { label = "Lighter", weight = 0, stack = true, close = true, description = "On new years eve a nice fire to stand next to" },
 
     ["repairkit"] = { label = "Repairkit", weight = 2500, stack = true, close = true, description = "A nice toolbox with stuff to repair your vehicle" },
     ["advancedrepairkit"] = { label = "Advanced Repairkit", weight = 4000, stack = true, close = true, description = "A nice toolbox with stuff to repair your vehicle" },
@@ -84,19 +77,23 @@ return {
     ["iron"] = { label = "Iron", weight = 100, stack = true, close = false, description = "Handy piece of metal that you can probably use for something" },
     ["glass"] = { label = "Glass", weight = 100, stack = true, close = false, description = "It is very fragile, watch out" },
     ["metalscrap"] = { label = "Metal Scrap", weight = 100, stack = true, close = false, description = "You can probably make something nice out of this" },
+    ["electronickit"] = { label = "Electronic Kit", weight = 100, stack = true, close = true, description = "If you've always wanted to build a robot you can maybe start here. Maybe you'll be the new Elon Musk?" },
 
     ["harness"] = { label = "Race Harness", weight = 1000, stack = false, close = true, description = "Racing Harness so no matter what you stay in the car" },
     ["nitrous"] = { label = "Nitrous", weight = 1000, stack = true, close = true, description = "Speed up, gas pedal! :D" },
 
     ["binoculars"] = { label = "Binoculars", weight = 600, stack = true, close = true, description = "Sneaky Breaky..." },
     ["diving_gear"] = { label = "Diving Gear", weight = 30000, stack = false, close = true, description = "An oxygen tank and a rebreather" },
-
-    ['paperbag'] = { label = 'Paper Bag', weight = 1, stack = false, close = false, consume = 0 },
-    ["handcuffs"] = { label = "Handcuffs", weight = 100, stack = true, close = true, description = "Comes in handy when people misbehave. Maybe it can be used for something else?" },
-
-    ["lighter"] = { label = "Lighter", weight = 0, stack = true, close = true, description = "On new years eve a nice fire to stand next to" },
     ["walkstick"] = { label = "Walking Stick", weight = 1000, stack = true, close = true, description = "Walking stick for ya'll grannies out there.. HAHA" },
-    ["police_stormram"] = { label = "Stormram", weight = 18000, stack = true, close = true, description = "A nice tool to break into doors" },
-    ["electronickit"] = { label = "Electronic Kit", weight = 100, stack = true, close = true, description = "If you've always wanted to build a robot you can maybe start here. Maybe you'll be the new Elon Musk?" },
+    ['parachute'] = { label = 'Parachute', weight = 8000, stack = false,
+        client = { anim = { dict = 'clothingshirt', clip = 'try_shirt_positive_d' }, usetime = 1500 }
+    },
+    ['panties'] = { label = 'Panties', weight = 10, consume = 0,
+        client = {
+            status = { thirst = -100000, stress = -25000 }, anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' }, prop = { model = `prop_cs_panties_02`, pos = vec3(0.03, 0.0, 0.02), rot = vec3(0.0, -13.5, -1.5) }, usetime = 2500,
+        }
+    },
     ["jerry_can"] = { label = "Jerrycan 20L", weight = 20000, stack = true, close = true, description = "A can full of Fuel" },
+
+    ['garbage'] = { label = 'Garbage' },
 }
