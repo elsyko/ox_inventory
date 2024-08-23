@@ -94,6 +94,8 @@ return {
         }
     },
     ["jerry_can"] = { label = "Jerrycan 20L", weight = 20000, stack = true, close = true, description = "A can full of Fuel" },
+    ["polaroid_camera"] = { label = "Polaroid Camera", weight = 1, stack = true, close = true, server = { export = "no-polaroid.usepolaroid_camera" } },
+    ["polaroid_photo"] = { label = "Polaroid Photo", weight = 1, stack = false, close = true, server = { export = "no-polaroid.usepolaroid_photo" }},
 
     ['garbage'] = { label = 'Garbage' },
 }
